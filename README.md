@@ -1,20 +1,84 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Portfolio 2026
 
-# Run and deploy your AI Studio app
+Welcome to my portfolio! A modern, interactive portfolio website showcasing my projects, skills, and experience as a developer.
 
-This contains everything you need to run your app locally.
+## 🚀 Live Demo
 
-View your app in AI Studio: https://ai.studio/apps/9b50ab4f-18b8-48e9-b006-f6313568f894
+[Add live demo link here]
 
-## Run Locally
+## 👨‍💻 About Me
 
-**Prerequisites:**  Node.js
+I'm a passionate developer with a focus on creating beautiful, responsive web experiences. This portfolio is built as a single-page application with smooth animations and a clean design.
 
+## ✨ Features
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
+- **Dark/Light Theme** - Toggle between themes for your preference
+- **Multi-language Support** - Localization support for multiple languages
+- **Smooth Animations** - Engaging animations powered by Motion
+- **Modern UI** - Clean and intuitive user interface with Tailwind CSS
+- **Interactive Sections** - Hero, Skills, Projects, and Contact sections
+
+## 🛠️ Tech Stack
+
+- **Frontend Framework:** React 19
+- **Language:** TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS
+- **Animations:** Motion
+- **Icons:** Lucide React
+- **Package Manager:** npm
+
+## 📋 Project Sections
+
+- **Hero** - Introduction and call-to-action
+- **Skills** - Technical skills and expertise
+- **Projects** - Showcase of my work
+- **Contact** - Get in touch section
+- **Navigation** - Easy navigation between sections
+
+## 🏃 Getting Started
+
+**Prerequisites:**
+- Node.js (v14 or higher)
+- npm or yarn
+
+**Installation:**
+
+1. Clone this repository:
+   ```bash
+   git clone <repository-url>
+   cd jihad-thabit-_-portfolio-2026
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:3000`
+
+**Build for Production:**
+
+```bash
+npm run build
+```
+
+The optimized build will be created in the `dist` folder.
+
+## 📝 License
+
+This project is open source.
+
+## 📬 Contact
+
+Feel free to reach out if you'd like to discuss projects or opportunities!
+
+---
+
+Made with ❤️ by Jihad Thabit
