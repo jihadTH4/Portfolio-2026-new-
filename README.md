@@ -4,7 +4,7 @@ Welcome to my portfolio! A modern, interactive portfolio website showcasing my p
 
 ## 🚀 Live Demo
 
-[[Add live demo link here](https://portfolio-2026-new-git-main-jihadth4s-projects.vercel.app/)]
+[[Live Demo](https://portfolio-2026-new-git-main-jihadth4s-projects.vercel.app/)]
 
 ## 👨‍💻 About Me
 
