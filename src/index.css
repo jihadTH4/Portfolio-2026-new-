@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora", "IBM Plex Sans Arabic", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-background: var(--background);
+  --color-primary: var(--primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-secondary: var(--secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-outline-variant: var(--outline-variant);
+
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+}
+
+:root {
+  --background: #111318;
+  --primary: #b3c5ff;
+  --primary-container: #0066ff;
+  --on-primary-container: #f8f7ff;
+  --secondary: #d3fbff;
+  --secondary-container: #00eefc;
+  --on-surface: #e2e2e8;
+  --on-surface-variant: #c2c6d8;
+  --outline-variant: #424656;
+  --grid-color: #424656;
+  --blob-opacity: 0.4;
+}
+
+.light {
+  --background: #ffffff;
+  --primary: #2563eb;
+  --primary-container: #dbeafe;
+  --on-primary-container: #1e3a8a;
+  --secondary: #0ea5e9;
+  --secondary-container: #7dd3fc;
+  --on-surface: #0f172a;
+  --on-surface-variant: #64748b;
+  --outline-variant: #e2e8f0;
+  --grid-color: #2563eb;
+  --blob-opacity: 0.15;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-on-surface antialiased transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply backdrop-blur-2xl border transition-all duration-300;
+    @apply bg-white/5 border-white/10 dark:bg-white/5 dark:border-white/10;
+  }
+
+  .light .glass {
+    @apply bg-black/5 border-black/10;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-linear-to-tr from-primary to-secondary-container;
+  }
+
+  .noise-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBq34hC7jm_wYZgj4TkPVoUyBZ_cgy4LzKZytQiIqF6sF5Ru6_gf4enLvzRvRWSIMB0a94xWEGSnD4yEDj60F99Rr2EiVYZa4uyd3E7SM3U1LABhwBdLEw3x6IuT1Rr3jMpEB9yjgowU0OPlp0M1x0H22uE0ORU-i1eHf2YSGI38QXSx0DN_TWL3XFtCJlSZlrN-ae4EKrikdt-gFvfWp0O9G9PgFmWN0YdzV4f8y-hrGc9Q-t-Mc3ZnD9Jid-qmfjI9e7tQRcGiF0d);
+    opacity: 0.03;
+    pointer-events: none;
+  }
+
+  .shimmer-mask {
+    @apply relative overflow-hidden;
+  }
+
+  .shimmer-mask::after {
+    content: "";
+    @apply absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/5 to-transparent;
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .shimmer-mask:hover::after {
+    @apply translate-x-full;
+  }
+}
+
+@keyframes drift {
+  from { transform: translate(-10%, -10%) scale(1); }
+  to { transform: translate(10%, 10%) scale(1.1); }
+}
+
+.animate-drift {
+  animation: drift 20s ease-in-out infinite alternate;
+}
