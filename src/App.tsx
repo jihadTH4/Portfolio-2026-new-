@@ -11,6 +11,7 @@ import { Hero } from "./components/Hero";
 
 const Skills = lazy(() => import("./components/Skills").then(m => ({ default: m.Skills })));
 const Projects = lazy(() => import("./components/Projects").then(m => ({ default: m.Projects })));
+const CS50CTA = lazy(() => import("./components/CS50CTA").then(m => ({ default: m.CS50CTA })));
 const Contact = lazy(() => import("./components/Contact").then(m => ({ default: m.Contact })));
 const Footer = lazy(() => import("./components/Footer").then(m => ({ default: m.Footer })));
 
@@ -30,6 +31,9 @@ export default function App() {
         </Suspense>
         <Suspense fallback={null}>
           <Projects />
+        </Suspense>
+        <Suspense fallback={null}>
+          <CS50CTA />
         </Suspense>
         <Suspense fallback={null}>
           <Contact />
