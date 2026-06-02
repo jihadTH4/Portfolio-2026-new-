@@ -4,7 +4,7 @@ Welcome to my portfolio! A modern, interactive portfolio website showcasing my p
 
 ## 🚀 Live Demo
 
-[Add live demo link here]
+[[Add live demo link here](https://portfolio-2026-new-git-main-jihadth4s-projects.vercel.app/)]
 
 ## 👨‍💻 About Me
 
@@ -40,23 +40,27 @@ I'm a passionate developer with a focus on creating beautiful, responsive web ex
 ## 🏃 Getting Started
 
 **Prerequisites:**
+
 - Node.js (v14 or higher)
 - npm or yarn
 
 **Installation:**
 
 1. Clone this repository:
+
    ```bash
    git clone <repository-url>
    cd jihad-thabit-_-portfolio-2026
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Start the development server:
+
    ```bash
    npm run dev
    ```
