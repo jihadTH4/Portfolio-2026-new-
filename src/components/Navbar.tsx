@@ -12,7 +12,8 @@ export function Navbar() {
   const { lang, toggleLang, t } = useLanguage();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    setScrolled(latest > 50);
+    const newScrolled = latest > 50;
+    setScrolled(prevScrolled => prevScrolled !== newScrolled ? newScrolled : prevScrolled);
   });
 
   const navItems = [

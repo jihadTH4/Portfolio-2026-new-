@@ -81,6 +81,10 @@ export function Hero() {
               alt="Jihad Thabit Portrait"
               className="w-full h-full object-cover object-top rounded-xl relative z-10 transition-transform duration-700 group-hover:scale-105"
               src={PersonalImage}
+              loading="eager"
+              fetchPriority="high"
+              width={450}
+              height={450}
             />
           </div>
           <div

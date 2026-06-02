@@ -32,7 +32,7 @@ export function Skills() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.05 }}
+            transition={{ delay: Math.min(index * 0.07, 0.5) }}
             whileHover={{ scale: 1.05, y: -5 }}
             className="glass p-8 flex flex-col items-center text-center gap-4 group shimmer-mask"
           >

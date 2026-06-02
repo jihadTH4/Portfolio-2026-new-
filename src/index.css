@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -59,8 +58,14 @@
 
 @layer components {
   .glass {
-    @apply backdrop-blur-2xl border transition-all duration-300;
-    @apply bg-white/5 border-white/10 dark:bg-white/5 dark:border-white/10;
+    @apply border transition-all duration-300 bg-white/[0.07];
+    @apply border-white/10 dark:border-white/10;
+  }
+
+  @media (min-width: 768px) {
+    .glass {
+      @apply backdrop-blur-2xl;
+    }
   }
 
   .light .glass {
@@ -72,8 +77,8 @@
   }
 
   .noise-overlay {
-    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBq34hC7jm_wYZgj4TkPVoUyBZ_cgy4LzKZytQiIqF6sF5Ru6_gf4enLvzRvRWSIMB0a94xWEGSnD4yEDj60F99Rr2EiVYZa4uyd3E7SM3U1LABhwBdLEw3x6IuT1Rr3jMpEB9yjgowU0OPlp0M1x0H22uE0ORU-i1eHf2YSGI38QXSx0DN_TWL3XFtCJlSZlrN-ae4EKrikdt-gFvfWp0O9G9PgFmWN0YdzV4f8y-hrGc9Q-t-Mc3ZnD9Jid-qmfjI9e7tQRcGiF0d);
-    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' result='noise' /%3E%3C/filter%3E%3Crect width='200' height='200' fill='%23000' /%3E%3Crect width='200' height='200' fill='%23fff' filter='url(%23noiseFilter)' opacity='0.03' /%3E%3C/svg%3E");
+    opacity: 1;
     pointer-events: none;
   }
 

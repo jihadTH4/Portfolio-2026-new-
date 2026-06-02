@@ -4,13 +4,15 @@
  */
 
 import { motion } from "motion/react";
+import { lazy, Suspense } from "react";
 import { Background } from "./components/Background";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
-import { Skills } from "./components/Skills";
-import { Projects } from "./components/Projects";
-import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer";
+
+const Skills = lazy(() => import("./components/Skills").then(m => ({ default: m.Skills })));
+const Projects = lazy(() => import("./components/Projects").then(m => ({ default: m.Projects })));
+const Contact = lazy(() => import("./components/Contact").then(m => ({ default: m.Contact })));
+const Footer = lazy(() => import("./components/Footer").then(m => ({ default: m.Footer })));
 
 export default function App() {
   return (
@@ -23,11 +25,19 @@ export default function App() {
         transition={{ duration: 1 }}
       >
         <Hero />
-        <Skills />
-        <Projects />
-        <Contact />
+        <Suspense fallback={null}>
+          <Skills />
+        </Suspense>
+        <Suspense fallback={null}>
+          <Projects />
+        </Suspense>
+        <Suspense fallback={null}>
+          <Contact />
+        </Suspense>
       </motion.main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </div>
   );
 }
